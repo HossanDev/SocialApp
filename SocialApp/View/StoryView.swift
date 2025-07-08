@@ -7,14 +7,14 @@
 import SwiftUI
 import RepositoryModule
 
-public struct StoryView: View {
+ struct StoryView: View {
   let story: Story
   
-  public init(story: Story) {
+   init(story: Story) {
     self.story = story
   }
   
-  public var body: some View {
+   var body: some View {
     VStack {
       StoryAsyncImageView(urlString: story.imageName, height: 90, width: 90)
         .clipShape(Circle())
@@ -26,4 +26,8 @@ public struct StoryView: View {
     }
     .frame(width: 80)
   }
+}
+
+#Preview {
+  StoryView(story: .mock)
 }

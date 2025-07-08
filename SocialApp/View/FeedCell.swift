@@ -20,7 +20,7 @@ struct FeedCell: View {
   var body: some View {
     VStack(alignment: .leading, spacing: verticalSpacing) {
       ProfileHeaderView(feedElement: feedElement, profileImageSize: profileImageSize)
-        .padding(.horizontal, 10)
+        .padding(.horizontal, horizontalPadding)
       
       FeedImageView(feedElement: feedElement)
       

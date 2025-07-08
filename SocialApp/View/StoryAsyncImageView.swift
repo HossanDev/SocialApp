@@ -7,16 +7,10 @@
 import SwiftUI
 import SharedUI
 
-public struct StoryAsyncImageView: View {
+ struct StoryAsyncImageView: View {
   let urlString: String
   var height: CGFloat?
   var width: CGFloat?
-  
-  public init(urlString: String, height: CGFloat? = nil, width: CGFloat? = nil) {
-    self.urlString = urlString
-    self.height = height
-    self.width = width
-  }
   
   var uiImage: UIImage? {
     if urlString.starts(with: "data:image") {
@@ -30,7 +24,7 @@ public struct StoryAsyncImageView: View {
     return nil
   }
   
-  public var body: some View {
+   var body: some View {
     if let image = uiImage {
       Image(uiImage: image)
         .resizable()

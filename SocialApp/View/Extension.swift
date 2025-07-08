@@ -63,3 +63,11 @@ public extension User {
     large: "https://randomuser.me/api/portraits/men/1.jpg"
   ), instagramUsername: "test_insta")
 }
+
+public extension Story {
+  static let mock = Story(
+    username: "Tom",
+    imageName: "https://randomuser.me/api/portraits/thumb/men/1.jpg",
+    isUserStory: true
+  )
+}

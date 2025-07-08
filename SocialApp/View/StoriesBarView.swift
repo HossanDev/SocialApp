@@ -53,7 +53,6 @@ public struct StoriesBarView: View {
     }
   }
   
-  
   private func addUserStoryImage(_ image: UIImage) {
     if let data = image.jpegData(compressionQuality: 0.8) {
       let base64String = data.base64EncodedString()

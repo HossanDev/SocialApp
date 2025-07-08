@@ -7,15 +7,15 @@
 
 import SwiftUI
 
-public struct StoryFullScreenView: View {
+struct StoryFullScreenView: View {
   let imageUrl: String
   @Environment(\.dismiss) var dismiss
   
-  public init(imageUrl: String) {
+   init(imageUrl: String) {
     self.imageUrl = imageUrl
   }
   
-  public var body: some View {
+   var body: some View {
     ZStack(alignment: .topTrailing) {
       Color.black
         .ignoresSafeArea()
@@ -38,7 +38,6 @@ public struct StoryFullScreenView: View {
     }
   }
 }
-
 
 #Preview {
   StoryFullScreenView(imageUrl: "https://images.unsplash.com/profile-1644850813919-b50b3d3f0559image?ixlib=rb-4.1.0&crop=faces&fit=crop&w=64&h=64")
