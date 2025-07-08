@@ -1,0 +1,33 @@
+{
+  "originHash" : "700ea20e36114689862c8ecbbfbc2e88136aec70b339c5dcc4fb91a8b2efe647",
+  "pins" : [
+    {
+      "identity" : "networkmodule",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/HossanDev/NetworkModule.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "ae28799e34af5c0234b6e423739f7aad18158b0f"
+      }
+    },
+    {
+      "identity" : "repositorymodule",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/HossanDev/RepositoryModule",
+      "state" : {
+        "branch" : "main",
+        "revision" : "941dbcdb05c6eaaf4e33f630c137ec8d044530a1"
+      }
+    },
+    {
+      "identity" : "sharedui",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/HossanDev/SharedUI.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "2843b371cf48507c0586fcfc7a1bc234247faf1b"
+      }
+    }
+  ],
+  "version" : 3
+}

@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import NetworkModule
+import RepositoryModule
 
 @main
 struct SocialAppApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  var body: some Scene {
+    WindowGroup {
+      FeedView(viewModel: FeedListViewModel(repository: FeedRepository(networkService: NetworkManager())))
     }
+  }
 }

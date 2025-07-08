@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		8C6B48F42E1DADCF00EDE237 /* SharedUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8C6B48F32E1DADCF00EDE237 /* SharedUI */; };
+		8C6B48F72E1DADE500EDE237 /* NetworkModule in Frameworks */ = {isa = PBXBuildFile; productRef = 8C6B48F62E1DADE500EDE237 /* NetworkModule */; };
+		8C6B48FA2E1DADFE00EDE237 /* RepositoryModule in Frameworks */ = {isa = PBXBuildFile; productRef = 8C6B48F92E1DADFE00EDE237 /* RepositoryModule */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		8C6B48D62E1DAD9D00EDE237 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +58,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C6B48F42E1DADCF00EDE237 /* SharedUI in Frameworks */,
+				8C6B48FA2E1DADFE00EDE237 /* RepositoryModule in Frameworks */,
+				8C6B48F72E1DADE500EDE237 /* NetworkModule in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +121,9 @@
 			);
 			name = SocialApp;
 			packageProductDependencies = (
+				8C6B48F32E1DADCF00EDE237 /* SharedUI */,
+				8C6B48F62E1DADE500EDE237 /* NetworkModule */,
+				8C6B48F92E1DADFE00EDE237 /* RepositoryModule */,
 			);
 			productName = SocialApp;
 			productReference = 8C6B48C52E1DAD9B00EDE237 /* SocialApp.app */;
@@ -195,6 +207,11 @@
 			);
 			mainGroup = 8C6B48BC2E1DAD9A00EDE237;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				8C6B48F22E1DADCF00EDE237 /* XCRemoteSwiftPackageReference "SharedUI" */,
+				8C6B48F52E1DADE500EDE237 /* XCRemoteSwiftPackageReference "NetworkModule" */,
+				8C6B48F82E1DADFE00EDE237 /* XCRemoteSwiftPackageReference "RepositoryModule" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 8C6B48C62E1DAD9B00EDE237 /* Products */;
 			projectDirPath = "";
@@ -552,6 +569,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8C6B48F22E1DADCF00EDE237 /* XCRemoteSwiftPackageReference "SharedUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/HossanDev/SharedUI.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		8C6B48F52E1DADE500EDE237 /* XCRemoteSwiftPackageReference "NetworkModule" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/HossanDev/NetworkModule.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		8C6B48F82E1DADFE00EDE237 /* XCRemoteSwiftPackageReference "RepositoryModule" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/HossanDev/RepositoryModule";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8C6B48F32E1DADCF00EDE237 /* SharedUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C6B48F22E1DADCF00EDE237 /* XCRemoteSwiftPackageReference "SharedUI" */;
+			productName = SharedUI;
+		};
+		8C6B48F62E1DADE500EDE237 /* NetworkModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C6B48F52E1DADE500EDE237 /* XCRemoteSwiftPackageReference "NetworkModule" */;
+			productName = NetworkModule;
+		};
+		8C6B48F92E1DADFE00EDE237 /* RepositoryModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C6B48F82E1DADFE00EDE237 /* XCRemoteSwiftPackageReference "RepositoryModule" */;
+			productName = RepositoryModule;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8C6B48BD2E1DAD9B00EDE237 /* Project object */;
 }
