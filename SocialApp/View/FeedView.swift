@@ -12,6 +12,7 @@ import NetworkModule
 struct FeedView: View {
   @StateObject var viewModel: FeedListViewModel
   @State private var isErrorOccured = true
+  @State private var selectedFeed: FeedElement? = nil
   
   var body: some View {
     NavigationStack {
@@ -46,6 +47,9 @@ struct FeedView: View {
             .imageScale(.large)
         }
       }
+      .navigationDestination(for: FeedElement.self) { feed in
+        DetailsView(feedElement: feed)
+      }
     }
     .task {
       await getDataFromAPI()
@@ -59,17 +63,19 @@ struct FeedView: View {
   @ViewBuilder
   func showFeedListView() -> some View {
     ScrollView {
-      
       LazyVStack(spacing: 32) {
         ForEach(viewModel.feedList, id: \.self) { feed in
-          FeedCell(feedElement: feed)
-            .onAppear {
-              if feed == viewModel.feedList.last {
-                Task {
-                  await viewModel.loadMoreFeed()
-                }
+          NavigationLink(value: feed) {
+            FeedCell(feedElement: feed)
+          }
+          .buttonStyle(.plain)
+          .onAppear {
+            if feed == viewModel.feedList.last {
+              Task {
+                await viewModel.loadMoreFeed()
               }
             }
+          }
         }
         if viewModel.viewState == .loadingMore {
           ProgressView()
