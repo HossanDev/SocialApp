@@ -13,9 +13,11 @@ struct FeedView: View {
   @StateObject var viewModel: FeedListViewModel
   @State private var isErrorOccured = true
   @State private var selectedFeed: FeedElement? = nil
+  @StateObject var coordinator = FlowCoordinator()
   
   var body: some View {
-    NavigationStack {
+    NavigationStack(path: $coordinator.path) {
+      
       VStack {
         StoriesBarView()
           .padding(.vertical, 8)
@@ -48,7 +50,7 @@ struct FeedView: View {
         }
       }
       .navigationDestination(for: FeedElement.self) { feed in
-        DetailsView(feedElement: feed)
+        DetailsView(feedElement: feed, coordinator: coordinator)
       }
     }
     .task {
@@ -65,17 +67,17 @@ struct FeedView: View {
     ScrollView {
       LazyVStack(spacing: 32) {
         ForEach(viewModel.feedList, id: \.self) { feed in
-          NavigationLink(value: feed) {
-            FeedCell(feedElement: feed)
-          }
-          .buttonStyle(.plain)
-          .onAppear {
-            if feed == viewModel.feedList.last {
-              Task {
-                await viewModel.loadMoreFeed()
+          FeedCell(feedElement: feed)
+            .onTapGesture {
+              coordinator.pushDetails(feed: feed)
+            }
+            .onAppear {
+              if feed == viewModel.feedList.last {
+                Task {
+                  await viewModel.loadMoreFeed()
+                }
               }
             }
-          }
         }
         if viewModel.viewState == .loadingMore {
           ProgressView()

@@ -11,6 +11,7 @@ import SharedUI
 
 struct DetailsView: View {
   let feedElement: FeedElement
+  @ObservedObject var coordinator: FlowCoordinator
   
   private let profileImageSize: CGFloat = 50
   private let horizontalPadding: CGFloat = 10
@@ -19,7 +20,7 @@ struct DetailsView: View {
   
   var body: some View {
     VStack(alignment: .leading, spacing: verticalSpacing) {
-      ProfileHeaderView(
+      DetailsHeaderView(
         feedElement: feedElement,
         profileImageSize: 100
       )
@@ -40,13 +41,28 @@ struct DetailsView: View {
       
       CreatedAtView(dateString: feedElement.createdAt)
         .padding(.horizontal, horizontalPadding)
+      
+      Spacer()
     }
     .navigationTitle("Details view")
     .navigationBarTitleDisplayMode(.inline)
+    .navigationBarBackButtonHidden(true)
+    .toolbar {
+      ToolbarItem(placement: .navigationBarLeading) {
+        Button(action: {
+          coordinator.pop()
+        }) {
+          HStack {
+            Image(systemName: "chevron.left")
+          }
+          .foregroundColor(.blue)
+        }
+      }
+    }
     .padding(.vertical, verticalSpacing)
   }
 }
 
 #Preview {
-  DetailsView(feedElement: .mock)
+  DetailsView(feedElement: .mock, coordinator: FlowCoordinator())
 }

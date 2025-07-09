@@ -41,26 +41,31 @@ public extension FeedElement {
     createdAt: "2024-07-07T12:00:00Z",
     altDescription: "Beautiful preview image for FeedCell",
     likes: 123,
-    user: User(
-      username: "testuser",
-      name: "Test User",
-      firstName: "Test",
-      profileImage: ProfileImage(
-        small: "https://randomuser.me/api/portraits/thumb/men/1.jpg",
-        medium: "https://randomuser.me/api/portraits/med/men/1.jpg",
-        large: "https://randomuser.me/api/portraits/men/1.jpg"
-      ),
-      instagramUsername: "test_insta"
-    )
+    user: User(username: "Tom",
+               name: "Tom Hopking",
+               firstName: " David",
+               profileImage: ProfileImage(small: "https://randomuser.me/api/portraits/thumb/men/1.jpg", medium: "https://randomuser.me/api/portraits/med/men/1.jpg", large: "https://randomuser.me/api/portraits/men/1.jpg"),
+               instagramUsername: "Tom David",
+               bio: "Tom Bio Informations",
+               totalCollections:20,
+               totalLikes: 10,
+               totalPhotos: 200,
+               totalPromotedPhotos: 20)
   )
 }
 
 public extension User {
-  static let mock = User(username: "Tom", name: "@TomHope", firstName: "Tom", profileImage: ProfileImage(
-    small: "https://randomuser.me/api/portraits/thumb/men/1.jpg",
-    medium: "https://randomuser.me/api/portraits/med/men/1.jpg",
-    large: "https://randomuser.me/api/portraits/men/1.jpg"
-  ), instagramUsername: "test_insta")
+  static let mock = User(username: "Tom",
+                         name: "Tom Hopking",
+                         firstName: " David",
+                         profileImage: ProfileImage(small: "https://randomuser.me/api/portraits/thumb/men/1.jpg", medium: "https://randomuser.me/api/portraits/med/men/1.jpg", large: "https://randomuser.me/api/portraits/men/1.jpg"),
+                         instagramUsername: "Tom David",
+                         bio: "Tom Bio Informations",
+                         totalCollections:20,
+                         totalLikes: 10,
+                         totalPhotos: 200,
+                         totalPromotedPhotos: 20)
+            
 }
 
 public extension Story {

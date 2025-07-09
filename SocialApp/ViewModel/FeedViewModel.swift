@@ -48,6 +48,7 @@ final class FeedListViewModel: ObservableObject {
       viewState = .loaded
     } catch {
       viewState = .error
+      print(error)
     }
   }
   

@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8C6B48F42E1DADCF00EDE237 /* SharedUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8C6B48F32E1DADCF00EDE237 /* SharedUI */; };
-		8C6B48F72E1DADE500EDE237 /* NetworkModule in Frameworks */ = {isa = PBXBuildFile; productRef = 8C6B48F62E1DADE500EDE237 /* NetworkModule */; };
-		8C6B48FA2E1DADFE00EDE237 /* RepositoryModule in Frameworks */ = {isa = PBXBuildFile; productRef = 8C6B48F92E1DADFE00EDE237 /* RepositoryModule */; };
+		8CFC4F542E1EAD39000F55F2 /* NetworkModule in Frameworks */ = {isa = PBXBuildFile; productRef = 8CFC4F532E1EAD39000F55F2 /* NetworkModule */; };
+		8CFC4F582E1EAD9E000F55F2 /* RepositoryModule in Frameworks */ = {isa = PBXBuildFile; productRef = 8CFC4F572E1EAD9E000F55F2 /* RepositoryModule */; };
+		8CFC4F5B2E1EAF24000F55F2 /* SharedUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8CFC4F5A2E1EAF24000F55F2 /* SharedUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,9 +71,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C6B48F42E1DADCF00EDE237 /* SharedUI in Frameworks */,
-				8C6B48FA2E1DADFE00EDE237 /* RepositoryModule in Frameworks */,
-				8C6B48F72E1DADE500EDE237 /* NetworkModule in Frameworks */,
+				8CFC4F5B2E1EAF24000F55F2 /* SharedUI in Frameworks */,
+				8CFC4F582E1EAD9E000F55F2 /* RepositoryModule in Frameworks */,
+				8CFC4F542E1EAD39000F55F2 /* NetworkModule in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,9 +134,9 @@
 			);
 			name = SocialApp;
 			packageProductDependencies = (
-				8C6B48F32E1DADCF00EDE237 /* SharedUI */,
-				8C6B48F62E1DADE500EDE237 /* NetworkModule */,
-				8C6B48F92E1DADFE00EDE237 /* RepositoryModule */,
+				8CFC4F532E1EAD39000F55F2 /* NetworkModule */,
+				8CFC4F572E1EAD9E000F55F2 /* RepositoryModule */,
+				8CFC4F5A2E1EAF24000F55F2 /* SharedUI */,
 			);
 			productName = SocialApp;
 			productReference = 8C6B48C52E1DAD9B00EDE237 /* SocialApp.app */;
@@ -221,9 +221,9 @@
 			mainGroup = 8C6B48BC2E1DAD9A00EDE237;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				8C6B48F22E1DADCF00EDE237 /* XCRemoteSwiftPackageReference "SharedUI" */,
-				8C6B48F52E1DADE500EDE237 /* XCRemoteSwiftPackageReference "NetworkModule" */,
-				8C6B48F82E1DADFE00EDE237 /* XCRemoteSwiftPackageReference "RepositoryModule" */,
+				8CFC4F522E1EAD39000F55F2 /* XCRemoteSwiftPackageReference "NetworkModule" */,
+				8CFC4F562E1EAD9E000F55F2 /* XCRemoteSwiftPackageReference "RepositoryModule" */,
+				8CFC4F592E1EAF24000F55F2 /* XCRemoteSwiftPackageReference "SharedUI" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 8C6B48C62E1DAD9B00EDE237 /* Products */;
@@ -423,9 +423,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SocialApp/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SocialApp/Info.plist;
@@ -440,6 +441,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Demo.com.SocialApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -451,9 +453,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SocialApp/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SocialApp/Info.plist;
@@ -468,6 +471,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Demo.com.SocialApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -584,15 +588,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		8C6B48F22E1DADCF00EDE237 /* XCRemoteSwiftPackageReference "SharedUI" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/HossanDev/SharedUI.git";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-		8C6B48F52E1DADE500EDE237 /* XCRemoteSwiftPackageReference "NetworkModule" */ = {
+		8CFC4F522E1EAD39000F55F2 /* XCRemoteSwiftPackageReference "NetworkModule" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/HossanDev/NetworkModule.git";
 			requirement = {
@@ -600,9 +596,17 @@
 				kind = branch;
 			};
 		};
-		8C6B48F82E1DADFE00EDE237 /* XCRemoteSwiftPackageReference "RepositoryModule" */ = {
+		8CFC4F562E1EAD9E000F55F2 /* XCRemoteSwiftPackageReference "RepositoryModule" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/HossanDev/RepositoryModule";
+			repositoryURL = "https://github.com/HossanDev/RepositoryModule.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		8CFC4F592E1EAF24000F55F2 /* XCRemoteSwiftPackageReference "SharedUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/HossanDev/SharedUI.git";
 			requirement = {
 				branch = main;
 				kind = branch;
@@ -611,20 +615,20 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8C6B48F32E1DADCF00EDE237 /* SharedUI */ = {
+		8CFC4F532E1EAD39000F55F2 /* NetworkModule */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 8C6B48F22E1DADCF00EDE237 /* XCRemoteSwiftPackageReference "SharedUI" */;
-			productName = SharedUI;
-		};
-		8C6B48F62E1DADE500EDE237 /* NetworkModule */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8C6B48F52E1DADE500EDE237 /* XCRemoteSwiftPackageReference "NetworkModule" */;
+			package = 8CFC4F522E1EAD39000F55F2 /* XCRemoteSwiftPackageReference "NetworkModule" */;
 			productName = NetworkModule;
 		};
-		8C6B48F92E1DADFE00EDE237 /* RepositoryModule */ = {
+		8CFC4F572E1EAD9E000F55F2 /* RepositoryModule */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 8C6B48F82E1DADFE00EDE237 /* XCRemoteSwiftPackageReference "RepositoryModule" */;
+			package = 8CFC4F562E1EAD9E000F55F2 /* XCRemoteSwiftPackageReference "RepositoryModule" */;
 			productName = RepositoryModule;
+		};
+		8CFC4F5A2E1EAF24000F55F2 /* SharedUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8CFC4F592E1EAF24000F55F2 /* XCRemoteSwiftPackageReference "SharedUI" */;
+			productName = SharedUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
