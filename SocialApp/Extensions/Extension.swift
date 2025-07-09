@@ -25,7 +25,6 @@ extension String {
         return formatter.string(from: date)
       }
     }
-    
     return self
   }
 }

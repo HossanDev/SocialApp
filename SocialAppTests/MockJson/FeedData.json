@@ -1,0 +1,26 @@
+[
+  {
+    "id": "lLenwc__YmU",
+    "urls": {
+      "raw": "https://example.com/raw.jpg",
+      "full": "https://example.com/full.jpg",
+      "regular": "https://example.com/regular.jpg",
+      "small": "https://example.com/small.jpg"
+    },
+    "createdAt": "2023-07-09T12:00:00Z",
+    "altDescription": "An example description",
+    "likes": 42,
+    "user": {
+      "username": "user123",
+      "name": "John Doe",
+      "firstName": "John",
+      "profileImage": {
+        "small": "https://example.com/profile_small.jpg",
+        "medium": "https://example.com/profile_medium.jpg",
+        "large": "https://example.com/profile_large.jpg"
+      },
+      "instagramUsername": "john_doe_insta"
+    }
+  }
+]
+
