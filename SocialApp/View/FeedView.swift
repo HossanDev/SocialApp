@@ -22,22 +22,22 @@ struct FeedView: View {
       content
         .navigationTitle("Feed")
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+          ToolbarItem(placement: .navigationBarLeading) {
+            Image("logo")
+              .resizable()
+              .backgroundStyle(.white)
+              .frame(width: 100, height: 32)
+          }
+          
+          ToolbarItem(placement: .navigationBarTrailing) {
+            Image(systemName: "paperplane")
+              .imageScale(.large)
+          }
+        }
         .navigationDestination(for: FeedElement.self) { feed in
           DetailsView(feedElement: feed, coordinator: coordinator)
         }
-    }
-    .toolbar {
-      ToolbarItem(placement: .navigationBarLeading) {
-        Image("logo")
-          .resizable()
-          .backgroundStyle(.white)
-          .frame(width: 100, height: 32)
-      }
-      
-      ToolbarItem(placement: .navigationBarTrailing) {
-        Image(systemName: "paperplane")
-          .imageScale(.large)
-      }
     }
     .sheet(isPresented: $showComments) {
       CommentsView(isPresented: $showComments)
