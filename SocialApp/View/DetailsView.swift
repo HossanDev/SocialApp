@@ -8,6 +8,7 @@
 import SwiftUI
 import RepositoryModule
 import SharedUI
+import ModelModule
 
 struct DetailsView: View {
   let feedElement: FeedElement

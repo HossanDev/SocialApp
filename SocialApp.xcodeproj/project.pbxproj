@@ -10,6 +10,7 @@
 		8CFC4F542E1EAD39000F55F2 /* NetworkModule in Frameworks */ = {isa = PBXBuildFile; productRef = 8CFC4F532E1EAD39000F55F2 /* NetworkModule */; };
 		8CFC4F582E1EAD9E000F55F2 /* RepositoryModule in Frameworks */ = {isa = PBXBuildFile; productRef = 8CFC4F572E1EAD9E000F55F2 /* RepositoryModule */; };
 		8CFC4F5B2E1EAF24000F55F2 /* SharedUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8CFC4F5A2E1EAF24000F55F2 /* SharedUI */; };
+		8CFC4FCC2E1FB458000F55F2 /* ModelModule in Frameworks */ = {isa = PBXBuildFile; productRef = 8CFC4FCB2E1FB458000F55F2 /* ModelModule */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 			files = (
 				8CFC4F5B2E1EAF24000F55F2 /* SharedUI in Frameworks */,
 				8CFC4F582E1EAD9E000F55F2 /* RepositoryModule in Frameworks */,
+				8CFC4FCC2E1FB458000F55F2 /* ModelModule in Frameworks */,
 				8CFC4F542E1EAD39000F55F2 /* NetworkModule in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +139,7 @@
 				8CFC4F532E1EAD39000F55F2 /* NetworkModule */,
 				8CFC4F572E1EAD9E000F55F2 /* RepositoryModule */,
 				8CFC4F5A2E1EAF24000F55F2 /* SharedUI */,
+				8CFC4FCB2E1FB458000F55F2 /* ModelModule */,
 			);
 			productName = SocialApp;
 			productReference = 8C6B48C52E1DAD9B00EDE237 /* SocialApp.app */;
@@ -224,6 +227,7 @@
 				8CFC4F522E1EAD39000F55F2 /* XCRemoteSwiftPackageReference "NetworkModule" */,
 				8CFC4F562E1EAD9E000F55F2 /* XCRemoteSwiftPackageReference "RepositoryModule" */,
 				8CFC4F592E1EAF24000F55F2 /* XCRemoteSwiftPackageReference "SharedUI" */,
+				8CFC4FCA2E1FB458000F55F2 /* XCRemoteSwiftPackageReference "ModelModule" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 8C6B48C62E1DAD9B00EDE237 /* Products */;
@@ -612,6 +616,14 @@
 				kind = branch;
 			};
 		};
+		8CFC4FCA2E1FB458000F55F2 /* XCRemoteSwiftPackageReference "ModelModule" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/HossanDev/ModelModule.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -629,6 +641,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8CFC4F592E1EAF24000F55F2 /* XCRemoteSwiftPackageReference "SharedUI" */;
 			productName = SharedUI;
+		};
+		8CFC4FCB2E1FB458000F55F2 /* ModelModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8CFC4FCA2E1FB458000F55F2 /* XCRemoteSwiftPackageReference "ModelModule" */;
+			productName = ModelModule;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

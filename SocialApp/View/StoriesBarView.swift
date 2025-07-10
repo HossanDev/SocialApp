@@ -7,6 +7,7 @@
 
 import SwiftUI
 import RepositoryModule
+import ModelModule
 
 public struct StoriesBarView: View {
   

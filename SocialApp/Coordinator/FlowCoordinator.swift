@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 import RepositoryModule
+import ModelModule
 
 final class FlowCoordinator: ObservableObject {
   @Published var path = NavigationPath()

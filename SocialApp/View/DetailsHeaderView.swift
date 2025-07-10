@@ -8,6 +8,7 @@
 import SwiftUI
 import RepositoryModule
 import SharedUI
+import ModelModule
 
 struct DetailsHeaderView: View {
   let feedElement: FeedElement
@@ -16,7 +17,6 @@ struct DetailsHeaderView: View {
   var body: some View {
     VStack(spacing: 12) {
       
-      // Profile Image centered horizontally
       if let urlString = feedElement.user?.profileImage.large ?? feedElement.user?.profileImage.medium,
          let url = URL(string: urlString) {
         
@@ -24,6 +24,7 @@ struct DetailsHeaderView: View {
           .scaledToFill()
           .frame(width: profileImageSize, height: profileImageSize)
           .clipShape(Circle())
+        
       } else {
         Image(systemName: "person.circle.fill")
           .resizable()
@@ -33,47 +34,37 @@ struct DetailsHeaderView: View {
           .foregroundColor(.gray)
       }
       
-      // Username aligned to leading (left)
-      if let user = feedElement.user {
-        Text("Username: \(user.instagramUsername ?? "Unknown")")
-          .font(.headline)
-          .fontWeight(.semibold)
-          .frame(maxWidth: .infinity, alignment: .leading)
+      VStack(alignment: .leading, spacing: 8) {
+        if let user = feedElement.user {
+          Text("Username: \(user.instagramUsername ?? "Unknown")")
+            .font(.headline)
+            .fontWeight(.semibold)
+            .padding(.horizontal)
+          
+          HStack(spacing: 10) {
+            Text("Firstname: \(user.firstName)")
+            Text("Likes: \(user.totalLikes)")
+            Text("Photos: \(user.totalPhotos)")
+            Text("Collections: \(user.totalCollections)")
+          }
+          .font(.caption)
+          .fontWeight(.bold)
           .padding(.horizontal)
-
-        
-        Text("Firstname: \(user.firstName)")
-          .font(.footnote)
-          .frame(maxWidth: .infinity, alignment: .leading)
-          .padding(.horizontal)
-        
-        Text("Likes: \(user.totalLikes)")
-          .font(.footnote)
-          .frame(maxWidth: .infinity, alignment: .leading)
-          .padding(.horizontal)
-        
-        Text("Photos: \(user.totalPhotos)")
-          .font(.footnote)
-          .frame(maxWidth: .infinity, alignment: .leading)
-          .padding(.horizontal)
-        
-        Text("Collections: \(user.totalCollections)")
-          .font(.footnote)
-          .frame(maxWidth: .infinity, alignment: .leading)
-          .padding(.horizontal)
-        
-        Text("BIO: \(user.bio ?? "Unknown")")
-          .font(.footnote)
-          .frame(maxWidth: .infinity, alignment: .leading)
-          .padding(.horizontal)
-        
+          .padding(.top ,10)
+          .lineLimit(1)
+          
+          Text("BIO: \(user.bio ?? "Unknown")")
+            .font(.footnote)
+            .padding(.horizontal)
+        }
       }
+      .frame(maxWidth: .infinity, alignment: .leading)
+      .padding(.top, 10)
     }
     .frame(maxWidth: .infinity)
     .padding(.top, 20)
   }
 }
-
 
 #Preview {
   DetailsHeaderView(feedElement: .mock, profileImageSize: 150)

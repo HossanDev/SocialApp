@@ -76,4 +76,3 @@ final class FeedListViewModelTests: XCTestCase {
     XCTAssertEqual(viewModel.viewState, .error)
   }
 }
-

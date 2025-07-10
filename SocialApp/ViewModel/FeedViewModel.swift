@@ -8,6 +8,7 @@
 import Foundation
 import RepositoryModule
 import NetworkModule
+import ModelModule
 
 enum ViewState {
   case loading
@@ -48,7 +49,6 @@ final class FeedListViewModel: ObservableObject {
       viewState = .loaded
     } catch {
       viewState = .error
-      print(error)
     }
   }
   

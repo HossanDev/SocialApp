@@ -7,6 +7,7 @@
 
 import Foundation
 import RepositoryModule
+import ModelModule
 
 extension String {
   func toYearMonth() -> String {

@@ -7,6 +7,7 @@
 
 import Foundation
 import RepositoryModule
+import ModelModule
 @testable import SocialApp
 
 class MockFeedRepository: FeedRepositoryProtocol {

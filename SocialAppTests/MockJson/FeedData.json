@@ -19,7 +19,13 @@
         "medium": "https://example.com/profile_medium.jpg",
         "large": "https://example.com/profile_large.jpg"
       },
-      "instagramUsername": "john_doe_insta"
+      "instagramUsername": "john_doe_insta",
+      "total_collections": 0,
+      "total_likes": 9,
+      "total_photos": 68,
+      "total_promoted_photos": 11,
+      "total_illustrations": 0,
+      "total_promoted_illustrations": 0
     }
   }
 ]

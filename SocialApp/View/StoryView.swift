@@ -6,6 +6,7 @@
 //
 import SwiftUI
 import RepositoryModule
+import ModelModule
 
  struct StoryView: View {
   let story: Story
